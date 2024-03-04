@@ -1,0 +1,13 @@
+.navbar{
+    background-color: #5F8670;
+}
+
+.navbar-brand, .nav-item{
+    color: white;
+}
+
+.navbar-brand:hover, .nav-item:hover{
+    transition: 1s;
+    color: #ffbf5f;
+    text-decoration: underline;
+}

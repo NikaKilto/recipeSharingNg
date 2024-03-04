@@ -1,0 +1,30 @@
+<div class="main-div">
+<form [formGroup]="recipeForm" (ngSubmit)="submitForms()" class="col-md-4">
+  <h2>Add  Recipe Below</h2>
+    <div class="mb-3">
+      <label for="dish-title" class="form-label">Dish Title</label>
+      <input formControlName="title" type="text" class="form-control" id="dish-title">
+      <p class="validator-error-message" *ngIf="recipeForm.controls['title'].invalid && (recipeForm.controls['title'].dirty || recipeForm.controls['title'].touched)">Title is Neccesary!</p>
+    </div>
+    <div class="mb-3">
+      <label for="dish-description" class="form-label">Dish Description</label>
+      <input formControlName="description" type="text" class="form-control" id="dish-description">
+      <p class="validator-error-message" *ngIf="recipeForm.controls['description'].invalid && (recipeForm.controls['description'].dirty || recipeForm.controls['description'].touched)">Description is Neccessary!</p>
+    </div>
+    <div class="mb-3">
+      <label for="dish-ingredients" class="form-label">Dish ingredients</label>
+      <input formControlName="ingredients" type="text" class="form-control" id="dish-ingredients">
+      <p class="validator-error-message" *ngIf="recipeForm.controls['ingredients'].invalid && (recipeForm.controls['ingredients'].dirty || recipeForm.controls['ingredients'].touched)">Ingredients are Neccesary!</p>
+    </div>
+    <div class="mb-3">
+      <label for="dish-instructions" class="form-label">Dish instructions</label>
+      <input formControlName="instructions" type="text" class="form-control" id="dish-instructions">
+      <p class="validator-error-message" *ngIf="recipeForm.controls['instructions'].invalid && (recipeForm.controls['instructions'].dirty || recipeForm.controls['instructions'].touched)">Instructions are Neccesary!</p>
+    </div>
+    <div class="mb-3">
+      <label for="dish-image" class="form-label">Dish image</label>
+      <input formControlName="image" type="text" class="form-control" id="dish-image">
+    </div>
+    <button [disabled]="!recipeForm.valid"  type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

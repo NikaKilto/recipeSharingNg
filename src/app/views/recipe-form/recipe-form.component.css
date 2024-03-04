@@ -1,0 +1,28 @@
+.validator-error-message{
+    font-size: 14px;
+    color: red;
+} 
+
+.main-div{
+    height: 90vh;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1591189863430-ab87e120f312?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, .3);
+    border-radius: 5%;
+}
+
+label{
+    font-size: 17px;
+}
+
+button{
+    width: 100%;
+}

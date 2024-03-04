@@ -1,0 +1,25 @@
+<app-empty-home *ngIf="recipeService.recipeList.length == 0"></app-empty-home>
+<div class="cards-container" *ngIf="recipeService.recipeList.length > 0">
+  <div
+    *ngFor="let recipe of recipeService.recipeList; let i = index"
+    class="card"
+    style="width: 17rem"
+  >
+    <img class="card-img-top" [src]="recipe.image" alt="" />
+    <div class="card-body">
+      <h5 class="card-title"><b>{{ recipe.title }}</b></h5>
+      <p class="card-text">{{ recipe.description | truncate : [50] }}</p>
+    </div>
+    <div class="buttons-container">
+      <button class="btn btn-success" type="button" (click)="onDetails(i)">
+        Details
+      </button>
+      <button class="btn btn-warning" type="button" (click)="onEdit(i)">
+        Edit
+      </button>
+      <button class="btn btn-danger" type="button" (click)="onDelete(i)">
+        Delete
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="main-div">
+  <div class="image-container">
+    <img
+      class="recipe-details-img"
+      [src]="recipeService.recipeList[id].image"
+      alt=""
+    />
+  </div>
+  <div class="recipe-details-container">
+    <h5 class="details-title">{{ recipeService.recipeList[id].title }}</h5>
+    <div class="details-body">
+      <p class="details-text">Description: {{ recipeService.recipeList[id].description }}</p>
+      <p class="details-text">Ingredients: {{ recipeService.recipeList[id].ingredients }}</p>
+      <p class="details-text">Instructions:
+        {{ recipeService.recipeList[id].instructions }}
+      </p>
+    </div>
+    <button class="btn btn-success" type="button" (click)="onClick()">
+      Add New
+    </button>
+  </div>
+</div>
